@@ -9,7 +9,9 @@ export default defineConfig({
   layout: {
     title: '@umijs/max',
   },
-  publicPath:'https://zhhhuazhang.github.io/auspiciousNumber/',
+  publicPath:'./',
+  base: './',
+  hash: true,
   routes: [
     {
       path: '/',
