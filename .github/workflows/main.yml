@@ -14,8 +14,9 @@ jobs:
 
     steps:
       # 拉代码
-      - name: Checkout code
-        uses: actions/checkout@v1
+      # checkout the repository content to github runner
+      - name: Checkout
+        uses: actions/checkout@v2
 
       # setup nodejs environment
       - name: Setup Node.js environment
