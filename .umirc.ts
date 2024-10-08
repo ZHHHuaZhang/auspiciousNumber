@@ -1,5 +1,7 @@
 import { defineConfig } from '@umijs/max';
 
+const repo = 'auspiciousNumber'; // 项目名称
+
 export default defineConfig({
   antd: {},
   access: {},
@@ -9,8 +11,9 @@ export default defineConfig({
   layout: {
     title: '@umijs/max',
   },
-  publicPath:'./',
-  base: './',
+
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   hash: true,
   routes: [
     {
