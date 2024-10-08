@@ -12,15 +12,16 @@ export default defineConfig({
   routes: [
     {
       path: '/',
-      redirect: '/home',
+      redirect: '/login',
     },
     {
       name: '登录页',
       path: '/login',
       component: './Login',
+      layout: false,
     },
     {
-      name: '首页',
+      name: '工作台',
       path: '/home',
       component: './Home',
     },
@@ -30,9 +31,9 @@ export default defineConfig({
       component: './Access',
     },
     {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
+      name: '号码管理',
+      path: '/management',
+      component: './Management',
     },
   ],
   npmClient: 'pnpm',
