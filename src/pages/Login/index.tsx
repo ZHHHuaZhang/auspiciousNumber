@@ -12,9 +12,8 @@ const Login: React.FC = () => {
     <PageContainer ghost>
       <div className={styles.container}>
         <LoginForm
-          onFinish={(values) => {
-            history.push('/home');
-            console.log('login', values);
+          onFinish={() => {
+            history.push('/management');
           }}
         >
           <>
